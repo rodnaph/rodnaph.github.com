@@ -10,6 +10,7 @@
             #floating-toc{position:fixed;text-align:right;overflow:hidden;top:10px;right:20px;height:20px;}#floating-toc li{margin:0;padding:0;list-style-type:none;}
             body{margin:0;padding:0;color:#252519;font-size:16px;background-color:#F5F5FF;font-family:'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;;}h1{margin-top:0;font-size:20px;}a.anchor{color:#252519;text-decoration:none;}a.anchor:hover{color:#5050A6;}table{margin-bottom:10px;border-bottom:solid #ddd 1px;;border-spacing:0;}code{display:inline;}p{margin-top:8px;}tr{margin:0px;padding:0px;}td.docs{border:none;margin:0px;padding-left:55px;width:410px;padding-right:20px;vertical-align:top;max-width:410px;background-color:#FFF;}td.docs pre{font-size:12px;overflow:hidden;}td.codes{border:none;margin:0px;padding-left:20px;width:55%;border-left:solid #E5E5EE 1px;font-size:10pt;vertical-align:top;overflow:hidden;background-color:#F5F5FF;}td.spacer{padding-bottom:40px;}pre code{display:block;padding:4px;}code{border:solid #DEDEDE 1px;padding-left:3px;padding-right:3px;font-size:14px;background-color:ghostWhite;}.syntaxhighlighter code{font-size:13px;}.footer{text-align:center;}
             table{width:100%;}
+            .clojure.variable,.clojure.symbol,.clojure.value{color: #006060 !important;}.clojure.string {color: #55B !important;}.clojure.functions {color: black !important;}.clojure.color1 {color: #666 !important;}.clojure.color3 {color: #900 !important;}.clojure.constants {color: #1A734D !important;} 
         </style>
     </head>
     <body>
@@ -27,10 +28,100 @@
                         welcome to my page on github
                     </td>
                 </tr>
+                <tr>
+                    <td class="docs">
+                        <div class="docs-header">
+                            <h1 class="project-name">about.me</h1>
+                        </div>
+                    </td>
+                    <td class="codes"></td>
+                </tr>
+                <tr>
+                    <td class="docs">
+                        <p>Hi! This page is just a quick summary of some of the projects I have hosted on Github.
+                        I've nicked the styling and layout from <a href="http://fogus.me/fun/marginalia/">Marginalia</a> cause I think it looks cool.</p>
+                        <p>I've not listed all my projects, just a few actually, so check out the full list on my main
+                        Github page: <a href="https://github.com/rodnaph">https://github.com/rodnaph</a>
+                    </td>
+                    <td class="codes">
+                        <pre class="brush: clojure">
+                            (ns about.me
+                              (:require [php clojure java etc...]))
+                        </pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="docs">
+                        <h1>Sockso</h1>
+                    </td>
+                    <td class="codes"></td>
+                </tr>
+                <tr>
+                    <td class="docs">
+                        <p>Sockso is a Java project that I started many years ago with the goal of making it as easy
+                        as possible to stream and share music between myself and a non-technical friend.  The solution
+                        needed to run anywhere with as few dependencies as possible, be super easy to configure, and
+                        basically <b>just work</b>.  And that's Sockso!  As long as you have Java, you just need to
+                        double click and tell it where your music is.</p>
+                        <p style="text-align:center;padding:15px;"><img src="http://sockso.pu-gh.com/files/sockso//images/album-small.png" alt="Sockso's web interface" /></p>
+                        <p>The project has a bunch of useful features and implementations like its own HTTP
+                        request/response code, DI via <a href="http://code.google.com/p/google-guice/">Guice</a>,
+                        easily extendable through heavy use of patterns and interfaces, high testing coverage,
+                        and a <a href="http://forums.pu-gh.com">great</a> <a href="http://sockso.pu-gh.com/community.html">community</a> 
+                        of users and contributors.</p>
+                    </td>
+                    <td class="codes">
+                        <pre class="brush: java">
+                        class Sockso {
+                            public static void main( String args[] ) {
+                                Server server = new HttpServer();
+                                Music collection = new MusicCollection( "/Users/rod/Music" );
+                                server.share( collection );
+                            }
+                        }
+                        </pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="docs">
+                        <h1>Sockso iOS</h1>
+                    </td>
+                    <td class="codes">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="docs">
+                        <h1>Topix and Bayes</h1>
+                    </td>
+                    <td class="codes">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="docs">
+                        <h1>Binder</h1>
+                    </td>
+                    <td class="codes">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="docs">
+                        <h1>PTask</h1>
+                    </td>
+                    <td class="codes">
+                    </td>
+                </tr>
             </tbody>
         </table>
         <script type="text/javascript" src="http://agorbatchev.typepad.com/pub/sh/3_0_83/scripts/shCore.js"></script>
         <script type="text/javascript" src="http://agorbatchev.typepad.com/pub/sh/3_0_83/scripts/shAutoloader.js"></script>
+        <script type="text/javascript" src="http://agorbatchev.typepad.com/pub/sh/3_0_83/scripts/shBrushJava.js"></script>
+        <script type="text/javascript">
+            if(typeof net=="undefined")net={};if(!net.brehaut)net.brehaut={};net.brehaut.ClojureTools=function(a){function b(a,b,c,d){this.value=a;this.index=b;this.length=d||a.length;this.tag=c;this.secondary_tags={}}function d(a,b,d){this.tag=a;this.parent=null;this.list=b;this.opening=d;this.closing=c;this.meta=null}function f(a,b,c){this.tag=a;this.token=b;this.attached_node=c;this.parent=null}function g(a){var c=[];var d=0;var e="0".charCodeAt(0);var f="9".charCodeAt(0);var g="a".charCodeAt(0);var h="f".charCodeAt(0);var i="A".charCodeAt(0);var j="F".charCodeAt(0);var k=false;for(var l=0,m=l,n=a.length;l<n&&m<=n;){var o=a[l];if(k)l--;switch(o){case"#":k=true;l++;m++;continue;case" ":case"	":case"\n":case"\r":case",":m++;break;case"^":case"`":case")":case"[":case"]":case"}":case"@":c[d++]=new b(o,l,o,++m-l);break;case"'":c[d++]=new b(a.slice(l,++m),l,k?"#'":"'",m-l);break;case"(":c[d++]=new b(a.slice(l,++m),l,"(",m-l);break;case"{":c[d++]=new b(a.slice(l,++m),l,k?"#{":"{",m-l);break;case"\\":if(a.slice(l+1,l+8)==="newline"){c[d++]=new b("\\newline",l,"value",8);m=l+9}else if(a.slice(l+1,l+6)==="space"){c[d++]=new b("\\space",l,"value",6);m=l+6}else if(a.slice(l+1,l+4)==="tab"){c[d++]=new b("\\tab",l,"value",4);m=l+5}else if(a.slice(l+1,l+6)==="&"){c[d++]=new b("\\&",l,"value",6);m=l+6}else if(a.slice(l+1,l+5)==="<"){c[d++]=new b("\\<",l,"value",5);m=l+5}else if(a.slice(l+1,l+5)===">"){c[d++]=new b("\\>",l,"value",5);m=l+5}else{m+=2;c[d++]=new b(a.slice(l,m),l,"value",2)}break;case"~":if(a[l+1]==="@"){m+=2;c[d++]=new b(a.slice(l,m),l,"splice",2)}else{c[d++]=new b(a.slice(l,++m),l,"unquote",2)}break;case'"':for(m++;m<=n;m++){if(a[m]==="\\")m++;else if(a[m]==='"')break}c[d++]=new b(a.slice(l,++m),l,k?"regexp":"string",m-l);break;case";":for(;m<=n&&a[m]!=="\n"&&a[m]!=="\r";m++);c[d++]=new b(a.slice(l,++m),l,"comments",m-l);break;case"+":case"-":case"0":case"1":case"2":case"3":case"4":case"5":case"6":case"7":case"8":case"9":var p=a.charCodeAt(l+1);if((o==="+"||o==="-")&&p>=e&&p<=f||o!=="+"&&o!=="-"){if(o==="+"||o==="-")m++;for(;m<=n;m++){var q=a.charCodeAt(m);if(q<e||q>f)break}o=a[m];p=a.charCodeAt(m+1);if((o==="r"||o==="R"||o==="/"||o===".")&&p>=e&&p<=f){for(m++;m<=n;m++){var q=a.charCodeAt(m);if(q<e||q>f)break}}o=a[m];p=a.charCodeAt(m+1);if((o==="x"||o==="X")&&(p>=e&&p<=f||p>=g&&p<=h||p>=i&&p<=j)){for(m++;m<=n;m++){var q=a.charCodeAt(m);if(q>=e&&q<=f||q>=g&&q<=h||q>=i&&q<=j)continue;break}}o=a[m];p=a.charCodeAt(m+1);if((o==="e"||o==="E")&&p>=e&&p<=f){for(m++;m<=n;m++){var q=a.charCodeAt(m);if(q<e||q>f)break}}o=a[m];if(o==="N"||o==="M")m++;c[d++]=new b(a.slice(l,m),l,"value",m-l);break};case"_":if(k&&o==="_"){c[d++]=new b(a.slice(l,++m),l,"skip",m-l);break};default:for(m++;m<=n;m++){switch(a[m]){case" ":case"	":case"\n":case"\r":case"\\":case",":case"{":case"}":case"(":case")":case"[":case"]":case"^":case"`":case"@":break;case";":if(a.slice(m-3,m+1)==="<"||a.slice(m-3,m+1)===">"||a.slice(m-4,m+1)==="&"){continue}break;default:continue}break}var r=a.slice(l,m);var s="symbol";if(r[0]==":"){s="keyword"}else if(r==="true"||r==="false"||r==="nil"){s="value"}c[d++]=new b(r,l,s,m-l)}k=false;l=m}return c}function h(a){function g(b){for(;b&&(b.tag==="comments"||b.tag==="invalid"||b.tag=="skip")&&c<e;){if(b.tag==="skip"){b.tag="preprocessor";j(g(a[++c]))}b=a[++c]}if(!b)return{};switch(b.tag){case"{":return h(new d("map",[],b),"}");case"(":return h(new d("list",[],b),")");case"#{":return h(new d("set",[],b),"}");case"[":return h(new d("vector",[],b),"]");case"'":return new f("quote",b,g(a[++c]));case"#'":return new f("varquote",b,g(a[++c]));case"@":return new f("deref",b,g(a[++c]));case"`":return new f("quasiquote",b,g(a[++c]));case"unquote":return new f("unquote",b,g(a[++c]));case"splice":return new f("splice",b,g(a[++c]));case"^":b.tag="meta";var i=g(a[++c]);var k=g(a[++c]);k.meta=i;return k}return b}function h(b,d){for(c++;c<e;c++){var f=a[c];if(f.tag==="}"||f.tag===")"||f.tag==="]"){if(f.tag!==d)f.tag="invalid";b.closing=f;if(d)return b}var h=g(f);h.parent=b;b.list[b.list.length]=h}return b}var b={list:[],tag:"toplevel",parent:null,opening:null,closing:null,depth:-1};var c=-1;var e=a.length;h(b,null);return b}function j(a){a.tag="comments";if(a.list){a.opening.tag="comments";a.closing.tag="comments";for(var b=0;b<a.list.length;b++){var c=a.list[b];if(c.list){j(c)}if(c.attached_node){j(c.attached_node)}else{c.tag="comments"}}}}function l(a,b){for(var c=0;c<a.length;c++){k[a[c]]=b}}function m(a,b){if(a.list){if(a.tag==="vector"){for(var c=0;c<a.list.length;c++){m(a.list[c],b)}}else if(a.tag==="map"){for(var c=0;c<a.list.length;c+=2){var d=a.list[c];var e=a.list[c+1];if(d.tag==="keyword"&&e.tag==="vector"){for(var f=0,g=e.list.length;f<g;f++){if(e.list[f].tag!=="symbol")continue;e.list[f].tag="variable";b[e.list[f].value]=true}}else{m(d,b);v(e,b)}}}}else if(a.tag==="symbol"&&a.value!=="&"&&a.value!=="&"){a.tag="variable";b[a.value]=true}}function n(a,b){if(a.tag!=="vector")return;var c=a.list;if(c.length%2===1)return;for(var d=0;d<c.length;d+=2){m(c[d],b);v(c[d+1],b)}}function o(a,b){var c=a.list[1];if(!i)return;if(c){b=Object.create(b);n(c,b)}for(var d=2;d<a.list.length;d++){v(a.list[d],b)}}function p(a,b,c){var d=a.list[c];if(d.tag!=="vector")return;b=Object.create(b);for(var e=0,f=d.list.length;e<f;e++){m(d.list[e],b)}for(var e=c,f=a.list.length;e<f;e++){v(a.list[e],b)}}function q(a,b){for(var c=1,d=a.list.length;c<d;c++){var e=a.list[c];if(e.tag==="vector"){p(a,b,c);return}else if(e.tag==="list"){p(e,b,0)}}}function r(a,b){b=Object.create(b);var c=a.list[1];var d;for(var e=0,f=c.list.length;e<f;e++){d=c.list[e];if(!d.list[0])continue;d.list[0].tag="variable";b[d.list[0].value]=true}for(e=0,f=c.list.length;e<f;e++){var d=c.list[e];q(d,b)}for(e=2,f=a.list.length;e<f;e++){v(a.list[e],b)}}function s(a,b){if(!a)return;if(a.list!==undefined&&a.list!==null){for(var c=0,d=a.list.length;c<d;c++){a.opening.secondary_tags.meta=true;a.closing.secondary_tags.meta=true;s(a.list[c],b)}}else if(a.attached_node){a.token.secondary_tags.meta=true;s(a.attached_node,b)}else{a.secondary_tags.meta=true}}function t(a){if(!(a&&a.meta))return;var b=a.meta;v(b,{});s(b,{})}function u(a,b){if(!a)return;if(a.list!==undefined&&a.list!==null){for(var c=0,d=a.list.length;c<d;c++){a.opening.secondary_tags.quoted=true;a.closing.secondary_tags.quoted=true;u(a.list[c],b)}}else if(a.attached_node){if(a.tag==="unquote"||a.tag==="splice")return;a.token.secondary_tags.quoted=true;u(a.attached_node,b)}else{a.secondary_tags.quoted=true}}function v(a,b){t(a);switch(a.tag){case"toplevel":for(var c=0;c<a.list.length;c++){v(a.list[c],b)}break;case"list":var d=a.list[0];if(d){if(d.tag==="list"||d.tag==="vector"||d.tag==="map"||d.tag==="set"){v(d,b)}else if(d.attached_node){v(d.attached_node,b)}else{d.tag=d.value.match(/(^\.)|(\.$)|[A-Z].*\//)?"method":"function"}if(k.hasOwnProperty(d.value)){k[d.value](a,b)}else{for(var c=1;c<a.list.length;c++){v(a.list[c],b)}}}else{a.opening.tag="value";a.closing.tag="value"}break;case"vector":case"map":case"set":for(var c=0;c<a.list.length;c++){v(a.list[c],b)}break;case"symbol":if(a.value.match(/[A-Z].*\/[A-Z_]+/)){a.tag="constant"}else if(i&&b[a.value]){a.tag="variable"}else if(a.tag==="symbol"&&a.value.match(/([A-Z].*\/)?[A-Z_]+/)){a.tag="type"}break;case"quote":case"quasiquote":u(a.attached_node,b);default:if(a.attached_node)v(a.attached_node,b)}}function x(a){for(var b=0,c=a.length;b<c;b++){var d=a[b];d.css=w[d.tag];for(var e in d.secondary_tags)if(d.secondary_tags.hasOwnProperty(e))d.css+=" "+e}}"use strict";if(!Object.create)Object.create=function(b){function c(){}c.prototype=b;return new c};var c=new b("",-1,"null",-1);var e=new d("null",[],c);var i=true;var k={};l(["comment"],j);l(["let","when-let","if-let","binding","doseq","for","dotimes","let*"],o);l(["defn","defn-","fn","bound-fn","defmacro","fn*","defmethod"],q);l(["letfn"],r);var w={constant:"constants",keyword:"constants",method:"color1",type:"color3","function":"functions",string:"string",regexp:"string",value:"value",comments:"comments",symbol:"symbol",variable:"variable",splice:"preprocessor",unquote:"preprocessor",preprocessor:"preprocessor",meta:"preprocessor","'":"preprocessor","#'":"preprocessor","(":"plain",")":"plain","{":"keyword","}":"keyword","#{":"keyword","[":"keyword","]":"keyword",invalid:"invalid","@":"plain"};a.brushes.Clojure=function(){};a.brushes.Clojure.prototype=new SyntaxHighlighter.Highlighter;a.brushes.Clojure.prototype.findMatches=function(b,c){if(this.params&&this.params.locals){i=this.params.locals===true||this.params.locals==="true"}else{i=true}var d=g(c);v(h(d),{});x(d);return d};a.brushes.Clojure.aliases=["clojure","Clojure","clj"];a.brushes.Clojure.register_annotation_rule=l;return{tokenize:g,build_tree:h}}(SyntaxHighlighter)
+        </script>            
+        <script type="text/javascript">
+            SyntaxHighlighter.defaults['gutter'] = false;
+            SyntaxHighlighter.all();
+        </script>
     </body>
 </html>
 
